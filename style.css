@@ -20,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;  /* rounded corners */
     /* Make this into a flexbox using display: flex */
     /* Use flexbox properties to stack elements in your tiles vertically and center them */
 
@@ -32,10 +33,58 @@ body {
 
     /* background color for tile, feel free to change */
     background-color: white;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.flex-tile:hover {
+    background-color: #f8fce4; /* light pink background on hover */
+    border-color: #f06292;     /* pink border on hover */
+}
+
+.flex-tile img:hover {
+    animation: bounce 0.7s ease 3;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 h2 {
     font-family: 'Petit Formal Script', cursive;
     font-size: 40px;
     color: rgb(187, 100, 139);
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+.info-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #efafc4;  /* pink button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: normal;
+    margin-top: 10px;
+    border: 5px solid transparent;  /*transparent border */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #f5739a;  /* darker pink on hover */
+    border-color: rgb(219, 197, 246);
+}
+
+.info-button:active {
+    border-color: #99d4fe;       /* bright yellow border on click */
+    background-color: #abfff0;   /* darker background on click */
 }
